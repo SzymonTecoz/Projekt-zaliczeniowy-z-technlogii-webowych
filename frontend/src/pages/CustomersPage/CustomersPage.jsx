@@ -50,7 +50,7 @@ export const CustomersPage = () => {
         setIsEditing(false); // To ukrywa formularz edycji
       })
       .catch((error) => {
-        console.error("Błąd podczas aktualizowania klienta:", error);
+        console.error("Błąd podczas aktualizowania klienta:", error); //pusty komentarz
       });
   };
 
