@@ -98,7 +98,7 @@ export const AddCustomerPage = () => {
           placeholder="Your phone number here"
           type="tel"
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit">Add customer</button>
       </form>
     </div>
   );

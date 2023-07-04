@@ -48,9 +48,10 @@ export const CustomersPage = () => {
         );
         setEditCustomerData({});
         setIsEditing(false); // To ukrywa formularz edycji
+        window.alert("Successfully changed customer!");
       })
       .catch((error) => {
-        console.error("Błąd podczas aktualizowania klienta:", error); //pusty komentarz
+        console.error("Błąd podczas aktualizowania klienta:", error);
       });
   };
 
@@ -88,7 +89,7 @@ export const CustomersPage = () => {
                   <strong className="customerDataLabel">Phone number: </strong>
                   {klient.phone_number}
                 </p>
-                <button type="button" className = "editButton" onClick={() => handleEditCustomer(klient.id)}> {/*Nie działają transformacje, nwm czemu*/}
+                <button type="button" className = "editButton" onClick={() => handleEditCustomer(klient.id)}> 
                   Edit
                 </button>
               </li>
@@ -137,7 +138,7 @@ export const CustomersPage = () => {
                 })
               }
             />
-            <button type="submit">Save</button>
+            <button type="submit">Save changes</button>
           </form>
         )}
       </div>
