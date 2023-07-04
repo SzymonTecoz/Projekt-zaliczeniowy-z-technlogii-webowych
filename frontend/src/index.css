@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* style */
+
+
+.addCustomerForm {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  gap: 1.25rem;
+  background-color: RoyalBlue;
+}
+
+.addCustomerForm label {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.addCustomerForm input {
+  padding: 5px;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: LightSkyBlue;
+  color: darkBlue;
+}
+
+.addCustomerForm input:focus {
+  outline: none;
+}
+
+.addCustomerForm button {
+  width: 160px;
+  padding: 8px;
+  border-radius: 0.125rem;
+  background-color: DeepSkyBlue;
+  color: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px black;
+  margin: auto;
+}
+
+.addCustomerForm button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.customersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  list-style-type: none;
+  background-color: RoyalBlue;
+  border-radius: 15px;
+}
+
+.customersList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: LightSkyBlue;
+}
+
+.customersList li p {
+  font-size: 16px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+
+/* CustomersPage.css */
+
+.customersPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.customersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  list-style-type: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+}
+
+.customerListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: royalblue;
+}
+
+.customerListItem p {
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.customerDataLabel {
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* OrdersPage.css */
+
+.ordersPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  list-style-type: none;
+}
+
+.orderListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: royalblue;
+}
+
+.orderListItem p {
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.orderListItem strong {
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.ordersList li {
+  margin-bottom: 30px;
+}
+
+.productsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: royalblue;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.productsList li {
+  
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: lightblue;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  display: block;
+  margin: 2rem 2rem 1rem;
+}
+
+.productsList li p {
+  font-size: 16px;
+}
+
+.productsList li button {
+  width: 160px;
+  padding: 8px;
+  border-radius: 0.125rem;
+  background-color: black;
+  color: yellow;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.productsList li button:active {
+  transform: translateY(2px);
+}
+
+
+/*formularz edytowania customerów*/
+.editForm {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  gap: 1.25rem;
+  background-color: RoyalBlue;
+}
+
+.editForm label {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.editForm input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 0.125rem;
+  border-width: 1px;
+  background-color: LightSkyBlue;
+  color: darkBlue;
+}
+
+.editForm input:focus {
+  outline: none;
+}
+
+.editForm button {
+  width: 160px;
+  padding: 8px;
+  border-radius: 0.125rem;
+  background-color: DeepSkyBlue;
+  color: white;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px black;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editForm button:active {
+  transform: translateY(1px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.editButton{
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: DeepSkyBlue;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.editButton button:active{
+  transform: translateY(1px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
